@@ -1,0 +1,85 @@
+@import "base/reset";
+@import "mixins/gradient";
+@import "mixins/fullscreen-image";
+@import "base/typography";
+@import "helpers/colors";
+@import "helpers/variables";
+@import "base/base.scss";
+// @import "modules/login";
+// @import "modules/form";
+// @import "modules/dribble";
+// @import "modules/grid";
+
+html {
+    font-size: 62.5%;
+    @media screen and (min-width: 768px) {
+        font-size: 80%;
+    }
+}
+
+body {
+    div {
+        font-size: 1.3rem;
+    }
+}
+
+.hero {
+    display: inline-block;
+    @include fullscreen-image(
+        "https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        200px
+    );
+}
+
+.container {
+    max-width: 768px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+
+    .card-body {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 1.25rem;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+    .col {
+        // width: 33%;
+        width: calc(33% -10px);
+        padding: 0 18px;
+        // margin-bottom: 10px;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

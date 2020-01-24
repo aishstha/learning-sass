@@ -1,0 +1,75 @@
+input[type=text]:focus,
+input[type=password]:focus {
+    outline: none;
+}
+
+.container {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    margin-right: 5px;
+    font-size: 18px;
+    &__label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #373339;
+        margin: 7px 0px;
+    }
+    &--block {
+        display: block;
+        min-height: 16px;
+    }
+    &__control {
+        height: 50px;
+        border: 1px solid $inputtype-color;
+        border-radius: 3px;
+        width: 100%;
+        padding: 10px 12px;
+        background-color: $inputtype-color;
+        &:focus {
+            background-color: $inputtypefocus-color;
+            color: black;
+            border: 1px solid $blue;
+        }
+    }
+}
+
+.btn {
+    width: 100%;
+    padding: 14px 32px;
+    font-size: 16px;
+    color: $white;
+    border-radius: 3px;
+    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    letter-spacing: .15px;
+    &--blue {
+        border-color: $teal;
+        background-color: $teal;
+        -webkit-box-shadow: 0 3px 7px 0 rgba(61, 97, 255, .2);
+        box-shadow: 0 3px 7px 0 rgba(61, 97, 255, .2);
+        display: inline-block;
+        &:hover {
+            background-color: rgb(19, 177, 166);
+            border-color: rgb(83, 158, 152);
+            color: $white;
+        }
+    }
+    &--block {
+        width: 100%;
+    }
+}
+
+.fw-100 {
+    font-weight: 100;
+}
+
+.fw-700 {
+    font-weight: 700;
+    padding: 0px 12px;
+}

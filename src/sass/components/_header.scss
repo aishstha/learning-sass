@@ -1,0 +1,122 @@
+// .header {
+//     // width: 64px
+//     background-color: greenyellow;
+// }
+
+// .nav {
+//     display: flex;
+//     flex-direction: row;
+//     // flex-wrap: wrap;
+//     align-items: center;
+//     background-color: aqua;
+//     // height: 200px;
+//     // width: 200px;
+//     // Properties for smaller screens.
+//     // Nothing is required here because we can use the default styles
+//     &__navleft {
+//         // padding-top: 45px;
+//         padding-right: 130px;
+//         background-color: red;
+//         display: block;
+//         width: 100%;
+//         height: auto;
+//         &__logo {
+//             height: 48px;
+//             width: 48px;
+//             background-color: green;
+//         }
+//         &__title {
+//             background-color: aquamarine;
+//             padding-right: 60px;
+//         }
+//     }
+//     // Properties for larger screens
+//     @media screen and (min-width: 768px) {
+//         // width: 60%;
+//     }
+// }
+
+// .logo {
+// }
+
+.navbar {
+    padding: 19px;
+    background: yellow;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__brand {
+        display: flex;
+        align-items: center;
+
+        .logo {
+            max-width: 60px;
+        }
+
+        .company-name {
+            margin-left: 8px;
+            > span {
+                display: block;
+                &:nth-child(1) {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                &:nth-child(2) {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: grey;
+                }
+            }
+        }
+    }
+
+    &__nav {
+        @media screen and (min-width: 768px) {
+            display: flex;
+        }
+
+        .menu {
+            &__menu-item {
+                align-items: center;
+                > a {
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: black;
+                    // active
+                }
+
+                > a:active {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                @media screen and (min-width: 768px) {
+                    background-color: darkblue;
+                    display: flex;
+                    flex-direction: row;
+                    margin-right: 40px;
+                    // flex-grow: 1;
+                    justify-content: space-between;
+                }
+            }
+            @media screen and (min-width: 768px) {
+                // background-color: darkblue;
+                display: flex;
+                // // flex-direction: row;
+                // // flex-grow: 1;
+                // justify-content: space-between;
+            }
+        }
+    }
+}
+
+.button-m {
+    background-color: #3040c4;
+    padding: 14px 24px;
+    font-weight: 600;
+    color: white;
+    font-size: 18px;
+    align-items: center;
+}

@@ -1,0 +1,36 @@
+@import "base/reset";
+@import "mixins/gradient";
+@import "mixins/fullscreen-image";
+@import "base/typography";
+@import "helpers/colors";
+@import "helpers/variables";
+@import "components/header";
+@import "base/base.scss";
+
+html {
+    font-size: 62.5%;
+    @media screen and (min-width: 768px) {
+        font-size: 80%;
+    }
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    background-color: pink;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    // left: 50%;
+    // top: 50%;
+    // transform: translate(-50%, -50%);
+    // min-width: ;
+    // This applies from 600px onwards
+    // @media screen and (min-width: 320px) {
+    //     body {
+    //         background-color: green;
+    //         left: 50%;
+    //         top: 50%;
+    //         transform: translate(-50%, -50%);
+    //     }
+    // }
+}
